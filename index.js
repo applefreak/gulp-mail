@@ -16,12 +16,13 @@ module.exports = function (options) {
         subject: null,
         html: null,
         text: null,
-        smtp: null
+        smtp: null,
+        attachments: null
     });
 
     return through2.obj(function (file, enc, next) {
 
-        var transporter = nodemailer.createTransport("SMTP", options.smtp);
+        var transporter = nodemailer.createTransport(options.smtp);
 
         if (file.isNull()) {
             this.push(file);
@@ -39,7 +40,8 @@ module.exports = function (options) {
             subject: subject,
             generateTextFromHTML: true, // added
             html: html,
-            text: text
+            text: text,
+            attachments: options.attachments
         }, function (error, info) {
 
             if (error) {
