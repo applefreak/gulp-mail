@@ -1,5 +1,3 @@
-// learnt from https://github.com/meerkats/gulp-mailer
-// used old nodemailer@0.7.1 instead
 
 var _ = require('underscore');
 var nodemailer = require('nodemailer');
@@ -38,7 +36,7 @@ module.exports = function (options) {
             from: options.from,
             to: to,
             subject: subject,
-            generateTextFromHTML: true, // added
+            generateTextFromHTML: true,
             html: html,
             text: text,
             attachments: options.attachments

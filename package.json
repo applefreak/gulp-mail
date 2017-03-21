@@ -1,9 +1,9 @@
 {
-  "name": "gulp-mail",
-  "description": "Send mails with gulp",
-  "version": "0.2.0",
-  "homepage": "https://github.com/fritx/gulp-mail",
-  "repository": "git@github.com:fritx/gulp-mail.git",
+  "name": "gulp-mailing",
+  "description": "Send mails with gulp, now with attachments!",
+  "version": "0.1.0",
+  "homepage": "https://github.com/applefreak/gulp-mailing",
+  "repository": "git@github.com:applefreak/gulp-mailing.git",
   "main": "./index.js",
   "scripts": {
     "test": "gulp test"  
@@ -11,11 +11,12 @@
   "keywords": [
     "gulpplugin",
     "mail",
-    "send"
+    "send",
+    "nodemailer"
   ],
   "dependencies": {
     "gulp-util": "^3.0.1",
-    "nodemailer": "^0.7.1",
+    "nodemailer": "^3.1.7",
     "through2": "^0.6.1",
     "underscore": "^1.7.0"
   },
